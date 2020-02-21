@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xd.mapper.EmpMapper">
+
+    <insert id="add" parameterType="emp">
+        insert into EMP values (#{empno},#{ename},#{job},#{mgr},#{hiredate},#{sal},#{comm},#{deptno})
+    </insert>
+
+    <select id="findAll" resultType="emp">
+        select * from EMP
+    </select>
+
+    <delete id="delete" parameterType="int">
+        delete from EMP where empno=#{empno}
+    </delete>
+    
+</mapper>
